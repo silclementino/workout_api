@@ -1,6 +1,8 @@
 from datetime import datetime
+from typing import Optional
 from uuid import uuid4
-from fastapi import APIRouter, Body, HTTPException, status
+from fastapi import APIRouter, Query, Body, HTTPException, status
+from sqlalchemy.future import select
 from pydantic import UUID4
 
 from workout_api.atleta.schemas import AtletaIn, AtletaOut, AtletaUpdate
